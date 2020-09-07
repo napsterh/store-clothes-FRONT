@@ -1,0 +1,4 @@
+.product__card:hover {
+    border: 1px solid red !important;
+    cursor: pointer;
+}
