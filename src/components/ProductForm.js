@@ -29,7 +29,7 @@ const ProductForm = () => {
     <div className="row">
       <div className="col-md-4 offset-md-4">
         <div className="card card-body">
-          <h3 className="text-black">Crear un nuevo producto</h3>
+          <h3 className="text-black">Crear nuevo producto</h3>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
                 <input
