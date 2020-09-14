@@ -14,7 +14,7 @@ const ProductForm = () => {
   
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const res =  await axios.post(`${API}/products`, state)
+        const res =  await axios.post('http://localhost:3000/products', state)
         console.log(res);
   };
 
@@ -28,8 +28,8 @@ const ProductForm = () => {
   return (
     <div className="row">
       <div className="col-md-4 offset-md-4">
-        <div className="card card-body bg-dark">
-          <h3 className="text-white">Crear un nuevo producto</h3>
+        <div className="card card-body">
+          <h3 className="text-black">Crear un nuevo producto</h3>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
                 <input
@@ -68,7 +68,7 @@ const ProductForm = () => {
                 onChange={handleInputChange}
                 ></textarea>
             </div>
-            <button className="btn btn-success btn-block mt-2">Agregar</button>
+            <button className="btn btn-primary btn-block mt-2">Agregar</button>
           </form>
         </div>
       </div>
