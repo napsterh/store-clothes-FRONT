@@ -8,15 +8,15 @@ const ProductCard = ({product}) => {
             <div className="mb-4" key={product._id}>
                 <div className="card text-center mx-auto product__card">
                 <img
-                    src={product.previewImageURL}
-                    alt={product.name}
+                    src={product.imagenMarcaURL}
+                    alt={product.nombre}
                     className="card-img-top"
                     style={{ width: "100%", margin: "auto" }}
                 />
                 <div className="card-body">
-                    <h3 className="h6">{product.name}</h3>
-                    <p className="card-text">{product.description}</p>
-                    <h5>S./{product.price}</h5>
+                    <h3 className="h6">{product.nombre}</h3>
+                    <p className="card-text">{product.descripcion}</p>
+                    <h5>S./{product.precio}</h5>
                 </div>
                 </div>
             </div>

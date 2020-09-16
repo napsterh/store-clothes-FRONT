@@ -9,7 +9,7 @@ const ProductPreview = () => {
     const [product, setProduct] = useState({})
 
     const getProduct =  async () => {
-        const res = await axios.get(`${API}/products/${productId}`)
+        const res = await axios.get(`http://localhost:3000/products/${productId}`)
         setProduct(res.data.product)
     }
 
@@ -22,12 +22,12 @@ const ProductPreview = () => {
             <div className="card card-body">
                 <div className="row">
                     <div className="col-3">
-                        <img src={product.previewImageURL} alt={product.name} className="img-fluid"/>
+                        <img src={product.imagenURL} alt={product.npmbre} className="img-fluid"/>
                     </div>
                     <div className="col-9">
-                        <h3>{product.name}</h3>
-                        <h3>Precio: S/{product.price}</h3>
-                        <p>{product.description}</p>
+                        <h3>{product.nombre}</h3>
+                        <h3>Precio: S/{product.precio}</h3>
+                        <p>{product.descripcion}</p>
                         <button className="btn btn-primary btn-block">
                             Comprar
                         </button>
