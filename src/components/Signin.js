@@ -3,7 +3,7 @@ import axios from "axios";
 import { useHistory } from 'react-router-dom'
 import { toast } from "react-toastify";
 
-const API = process.env.REACT_APP_API;
+//const API = process.env.REACT_APP_API;
 
 const Signin = () => {
   let history = useHistory();
@@ -18,8 +18,9 @@ const Signin = () => {
     //const res =  await axios.post(`${API}/users/signin`, state)
     await axios.post('http://localhost:3000/users/signin', state)
       .then((res) => {
-        history.push('/products');
         toast.success('Inicio de sesión satisfactorio');
+        history.push('/products');
+        console.log('Inicio de sesión OK')
       }, (error) => {
         console.log(error);
         toast.error('Ocurrió un error, vuelva a intentarlo');

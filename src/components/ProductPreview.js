@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
-const API = process.env.REACT_APP_API;
+//const API = process.env.REACT_APP_API;
 
 const ProductPreview = () => {
     const { productId } = useParams()
@@ -15,7 +15,7 @@ const ProductPreview = () => {
 
     useEffect(() => {
         getProduct();
-    }, [])
+    }, []);
 
     return <div className="row">
         <div className="col-md-7 offset-md-4">

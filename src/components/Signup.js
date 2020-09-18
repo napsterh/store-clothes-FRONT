@@ -3,7 +3,7 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const API = process.env.REACT_APP_API;
+//const API = process.env.REACT_APP_API;
 
 const Signup = () => {
   let history = useHistory();
@@ -20,7 +20,6 @@ const Signup = () => {
     await axios.post('http://localhost:3000/users/signup', state)
       .then((res) => {
         history.push('/users/Signin');
-        console.log('Todo OK');
         toast.success('Usuario registrado satisfactoriamente');
       }, (error) => {
         console.log(error);

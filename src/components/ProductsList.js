@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ProductCard from './ProductCard'
 
-const API = process.env.REACT_APP_API;
+//const API = process.env.REACT_APP_API;
 
 const ProductsList = () => {
   const [products, setProducts] = useState([]);
